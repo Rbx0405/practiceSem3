@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Web Form Example</title>
+</head>
+
+<body>
+    <h1>Sample Web Form</h1>
+    <form action="page1.html" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <br><br>
+        <label>Language:</label>
+        <input type="checkbox" id="english" name="languages[]" value="English"> <label for="english">English</label>
+        <input type="checkbox" id="spanish" name="languages[]" value="Spanish"> <label for="spanish">Spanish</label>
+        <input type="checkbox" id="french" name="languages[]" value="French"> <label for="french">French</label>
+        <br><br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+
+</html>

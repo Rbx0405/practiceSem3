@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fibonacci Numbers</title>
+</head>
+
+<body>
+    <h1>Generate Fibonacci Numbers</h1>
+    <label for="numberInput">Enter the number (n):</label>
+    <input type="number" id="numberInput">
+    <button onclick="generateFibonacci()">Generate</button>
+    <p id="result"></p>
+    <script>
+        function generateFibonacci() {
+            const n = parseInt(document.getElementById("numberInput").value);
+            const resultElement = document.getElementById("result");
+            if (!isNaN(n) && n >= 1) {
+                const fibonacciSequence = [0, 1];
+                while (fibonacciSequence.length < n) {
+                    const nextFibonacci = fibonacciSequence[fibonacciSequence.length - 1] + fibonacciSequence[fibonacciSequence.length - 2];
+                    fibonacciSequence.push(nextFibonacci);
+                }
+                resultElement.textContent = `The first ${n} Fibonacci numbers:${fibonacciSequence.join(",")}`;
+            }
+            else {
+                resultElement.textContent = "Please enter a valid position number(n).";
+            }
+        }
+    </script>
+</body>
+
+</html>
